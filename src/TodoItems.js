@@ -21,11 +21,11 @@ class TodoItems extends Component {
         let listItems = todoEntries.map(this.createTasks);
 
         return (
-            <ul className="theList">
+            <ol className="theList">
                 <FlipMove duration={250} easing="ease-out">
                     {listItems}
                 </FlipMove>
-            </ul>
+            </ol>
         );
     }
 };
