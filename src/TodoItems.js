@@ -1,5 +1,6 @@
 import React, { Component } from "react" ;
 import FlipMove from "react-flip-move";
+import "./TodoItems.css";
 
 class TodoItems extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class TodoItems extends Component {
     }
 
     createTasks(item) {
-        return <li onClick={() => this.delete(item.key)} key={item.key}>{item.text}</li>
+        return <li key={item.key}>{item.text}<button onClick={() => this.delete(item.key)} className="deleteButton">X</button></li>
     }
 
     delete(key) {
